@@ -39,29 +39,4 @@ func main() {
 	} else {
 		fmt.Printf("usage: %s file1 file2 ...\n", os.Args[0])
 	}
-
-	/*
-		nicoXML := Nicovideo{Thumb{"", ""}}
-		err := xml.Unmarshal([]byte(str), &nicoXML)
-
-		if err != nil {
-			log.Fatal(err)
-			return
-		}
-
-		fmt.Println(nicoXML)
-		fmt.Println("title: " + nicoXML.Thumb.Title)
-		fmt.Println("length: " + nicoXML.Thumb.Length)
-	*/
 }
-
-/*
-type Nicovideo struct {
-	Thumb Thumb `xml:"thumb"`
-}
-
-type Thumb struct {
-	Title  string `xml:"title"`
-	Length string `xml:"length"`
-}
-*/

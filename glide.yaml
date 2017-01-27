@@ -1,0 +1,4 @@
+package: github.com/ymomoi/goval-parser
+import:
+- package: github.com/k0kubun/pp
+  version: ^2.3.0
