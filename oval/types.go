@@ -56,6 +56,7 @@ type Criterion struct {
 
 // Affected : >definitions>definition>metadata>affected
 type Affected struct {
+	XMLName   xml.Name `xml:"affected"`
 	Family    string   `xml:"family,attr"`
 	Platforms []string `xml:"platform"`
 }
