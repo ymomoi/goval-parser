@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<oval_definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:oval="http://oval.mitre.org/XMLSchema/oval-common-5" xsi:schemaLocation="http://oval.mitre.org/XMLSchema/oval-definitions-5 oval-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-common-5 oval-common-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#ios ios-definitions-schema.xsd" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5">
+  <generator>
+    <oval:product_name>PSIRT OVAL Definition Generator</oval:product_name>
+    <oval:product_version>0.1</oval:product_version>
+    <oval:schema_version>5.10</oval:schema_version>
+    <oval:timestamp>2016-10-20T04:51:20.9475392-05:00</oval:timestamp>
+  </generator>
+  <definitions>
+    <definition id="oval:cisco.oval:def:34706" version="1" class="vulnerability">
+      <metadata>
+        <title>cisco-sa-20160928-msdp-CVE-2016-6382</title>
+        <affected family="ios">
+          <platform>Cisco IOS</platform>
+        </affected>
+        <reference source="CVE" ref_id="CVE-2016-6382" ref_url="" />
+        <reference source="Vendor Advisory" ref_id="cisco-sa-20160928-msdp" ref_url="http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160928-msdp" />
+        <description />
+      </metadata>
+      <criteria operator="AND">
+        <criterion test_ref="oval:cisco.oval:tst:34697" comment="config ip msdp" />
+        <criterion test_ref="oval:cisco.oval:tst:34851" comment="IOS Versions for CSCuy16399" />
+      </criteria>
+    </definition>
+  </definitions>
+  <tests>
+    <line_test id="oval:cisco.oval:tst:34697" version="1" check="all" comment="config ip msdp" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <object object_ref="oval:cisco.oval:obj:1" />
+      <state state_ref="oval:cisco.oval:ste:58984" />
+    </line_test>
+    <version55_test id="oval:cisco.oval:tst:34851" version="1" check="at least one" state_operator="OR" comment="IOS Versions for CSCuy16399" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <object object_ref="oval:org.mitre.oval:obj:6804" />
+      <state state_ref="oval:cisco.oval:ste:58418" />
+      <state state_ref="oval:cisco.oval:ste:58385" />
+      <state state_ref="oval:cisco.oval:ste:58479" />
+      <state state_ref="oval:cisco.oval:ste:58420" />
+      <state state_ref="oval:cisco.oval:ste:58487" />
+      <state state_ref="oval:cisco.oval:ste:58468" />
+      <state state_ref="oval:cisco.oval:ste:58592" />
+      <state state_ref="oval:cisco.oval:ste:58601" />
+      <state state_ref="oval:cisco.oval:ste:58416" />
+      <state state_ref="oval:cisco.oval:ste:58504" />
+      <state state_ref="oval:cisco.oval:ste:58490" />
+      <state state_ref="oval:cisco.oval:ste:58796" />
+      <state state_ref="oval:cisco.oval:ste:58602" />
+      <state state_ref="oval:cisco.oval:ste:58585" />
+      <state state_ref="oval:cisco.oval:ste:58422" />
+      <state state_ref="oval:cisco.oval:ste:58494" />
+      <state state_ref="oval:cisco.oval:ste:58505" />
+      <state state_ref="oval:cisco.oval:ste:58605" />
+      <state state_ref="oval:cisco.oval:ste:58664" />
+      <state state_ref="oval:cisco.oval:ste:58453" />
+      <state state_ref="oval:cisco.oval:ste:58776" />
+      <state state_ref="oval:cisco.oval:ste:58633" />
+      <state state_ref="oval:cisco.oval:ste:58495" />
+      <state state_ref="oval:cisco.oval:ste:58814" />
+      <state state_ref="oval:cisco.oval:ste:58608" />
+      <state state_ref="oval:cisco.oval:ste:58425" />
+      <state state_ref="oval:cisco.oval:ste:58541" />
+      <state state_ref="oval:cisco.oval:ste:58466" />
+      <state state_ref="oval:cisco.oval:ste:58545" />
+      <state state_ref="oval:cisco.oval:ste:58614" />
+      <state state_ref="oval:cisco.oval:ste:58789" />
+      <state state_ref="oval:cisco.oval:ste:58536" />
+      <state state_ref="oval:cisco.oval:ste:58549" />
+      <state state_ref="oval:cisco.oval:ste:58887" />
+      <state state_ref="oval:cisco.oval:ste:58619" />
+      <state state_ref="oval:cisco.oval:ste:58546" />
+      <state state_ref="oval:cisco.oval:ste:58615" />
+      <state state_ref="oval:cisco.oval:ste:58660" />
+      <state state_ref="oval:cisco.oval:ste:58611" />
+      <state state_ref="oval:cisco.oval:ste:58662" />
+      <state state_ref="oval:cisco.oval:ste:58606" />
+      <state state_ref="oval:cisco.oval:ste:58612" />
+      <state state_ref="oval:cisco.oval:ste:58659" />
+      <state state_ref="oval:cisco.oval:ste:58613" />
+      <state state_ref="oval:cisco.oval:ste:58663" />
+      <state state_ref="oval:cisco.oval:ste:58625" />
+      <state state_ref="oval:cisco.oval:ste:58843" />
+      <state state_ref="oval:cisco.oval:ste:58778" />
+      <state state_ref="oval:cisco.oval:ste:58707" />
+      <state state_ref="oval:cisco.oval:ste:58704" />
+      <state state_ref="oval:cisco.oval:ste:58666" />
+      <state state_ref="oval:cisco.oval:ste:58784" />
+      <state state_ref="oval:cisco.oval:ste:58628" />
+      <state state_ref="oval:cisco.oval:ste:58922" />
+      <state state_ref="oval:cisco.oval:ste:58775" />
+      <state state_ref="oval:cisco.oval:ste:58665" />
+      <state state_ref="oval:cisco.oval:ste:58847" />
+      <state state_ref="oval:cisco.oval:ste:58923" />
+      <state state_ref="oval:cisco.oval:ste:58635" />
+      <state state_ref="oval:cisco.oval:ste:58786" />
+      <state state_ref="oval:cisco.oval:ste:58785" />
+      <state state_ref="oval:cisco.oval:ste:58711" />
+      <state state_ref="oval:cisco.oval:ste:58710" />
+      <state state_ref="oval:cisco.oval:ste:58708" />
+      <state state_ref="oval:cisco.oval:ste:58859" />
+      <state state_ref="oval:cisco.oval:ste:58709" />
+      <state state_ref="oval:cisco.oval:ste:58706" />
+      <state state_ref="oval:cisco.oval:ste:58794" />
+      <state state_ref="oval:cisco.oval:ste:58866" />
+      <state state_ref="oval:cisco.oval:ste:58718" />
+      <state state_ref="oval:cisco.oval:ste:58783" />
+      <state state_ref="oval:cisco.oval:ste:58701" />
+      <state state_ref="oval:cisco.oval:ste:58842" />
+      <state state_ref="oval:cisco.oval:ste:58670" />
+      <state state_ref="oval:cisco.oval:ste:58870" />
+      <state state_ref="oval:cisco.oval:ste:58702" />
+      <state state_ref="oval:cisco.oval:ste:58787" />
+      <state state_ref="oval:cisco.oval:ste:58851" />
+      <state state_ref="oval:cisco.oval:ste:58790" />
+      <state state_ref="oval:cisco.oval:ste:58874" />
+      <state state_ref="oval:cisco.oval:ste:58703" />
+      <state state_ref="oval:cisco.oval:ste:58691" />
+      <state state_ref="oval:cisco.oval:ste:58679" />
+      <state state_ref="oval:cisco.oval:ste:58788" />
+      <state state_ref="oval:cisco.oval:ste:58809" />
+      <state state_ref="oval:cisco.oval:ste:58791" />
+      <state state_ref="oval:cisco.oval:ste:58808" />
+      <state state_ref="oval:cisco.oval:ste:58879" />
+      <state state_ref="oval:cisco.oval:ste:58854" />
+      <state state_ref="oval:cisco.oval:ste:58807" />
+      <state state_ref="oval:cisco.oval:ste:58846" />
+      <state state_ref="oval:cisco.oval:ste:58798" />
+      <state state_ref="oval:cisco.oval:ste:58946" />
+      <state state_ref="oval:cisco.oval:ste:58810" />
+      <state state_ref="oval:cisco.oval:ste:58850" />
+      <state state_ref="oval:cisco.oval:ste:58813" />
+      <state state_ref="oval:cisco.oval:ste:58856" />
+      <state state_ref="oval:cisco.oval:ste:58890" />
+      <state state_ref="oval:cisco.oval:ste:58848" />
+      <state state_ref="oval:cisco.oval:ste:58844" />
+      <state state_ref="oval:cisco.oval:ste:58852" />
+      <state state_ref="oval:cisco.oval:ste:58860" />
+      <state state_ref="oval:cisco.oval:ste:58871" />
+      <state state_ref="oval:cisco.oval:ste:58876" />
+      <state state_ref="oval:cisco.oval:ste:58849" />
+      <state state_ref="oval:cisco.oval:ste:58869" />
+      <state state_ref="oval:cisco.oval:ste:58873" />
+      <state state_ref="oval:cisco.oval:ste:58862" />
+      <state state_ref="oval:cisco.oval:ste:58881" />
+      <state state_ref="oval:cisco.oval:ste:58943" />
+      <state state_ref="oval:cisco.oval:ste:58950" />
+      <state state_ref="oval:cisco.oval:ste:58918" />
+      <state state_ref="oval:cisco.oval:ste:58945" />
+      <state state_ref="oval:cisco.oval:ste:58895" />
+      <state state_ref="oval:cisco.oval:ste:58896" />
+      <state state_ref="oval:cisco.oval:ste:58894" />
+      <state state_ref="oval:cisco.oval:ste:58898" />
+      <state state_ref="oval:cisco.oval:ste:58902" />
+      <state state_ref="oval:cisco.oval:ste:58900" />
+      <state state_ref="oval:cisco.oval:ste:58932" />
+      <state state_ref="oval:cisco.oval:ste:58947" />
+      <state state_ref="oval:cisco.oval:ste:58972" />
+      <state state_ref="oval:cisco.oval:ste:59026" />
+      <state state_ref="oval:cisco.oval:ste:58927" />
+      <state state_ref="oval:cisco.oval:ste:58942" />
+      <state state_ref="oval:cisco.oval:ste:59027" />
+      <state state_ref="oval:cisco.oval:ste:58944" />
+      <state state_ref="oval:cisco.oval:ste:58929" />
+      <state state_ref="oval:cisco.oval:ste:59037" />
+    </version55_test>
+  </tests>
+  <objects>
+    <line_object id="oval:cisco.oval:obj:1" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <show_subcommand>show running-config</show_subcommand>
+    </line_object>
+    <version55_object id="oval:org.mitre.oval:obj:6804" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios" />
+  </objects>
+  <states>
+    <line_state id="oval:cisco.oval:ste:58984" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <show_subcommand>show running-config</show_subcommand>
+      <config_line operation="pattern match">ip msdp</config_line>
+    </line_state>
+    <version55_state id="oval:cisco.oval:ste:58418" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(1)T</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58385" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.3(3)S</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58479" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(2)E</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58420" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(1)S</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58487" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(2)S</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58468" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(2)T</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58592" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(1)SY</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58601" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(3)M</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58416" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.3(3)S1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58504" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.3(3)S2</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58490" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.3(3)S3</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58796" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.3(3)S6</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58602" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(3)S</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58585" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.3(3)S4</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58422" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(1)CG</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58494" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(1)T2</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58505" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(1)T1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58605" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(1)T3</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58664" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(1)S</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58453" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.3(3)S1a</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58776" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(2)EB</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58633" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.3(3)S5</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58495" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(1)S1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58814" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(1)T</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58608" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(3)E</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58425" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.3(3)S2a</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58541" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(1)S2</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58466" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(2)SN</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58545" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(2)SN1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58614" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(2)S1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58789" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(2)S</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58536" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(1)CG1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58549" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(2)CG</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58887" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(3)M</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58619" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(2)E1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58546" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(2)T1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58615" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(1)S3</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58660" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(3)S1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58611" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(3)M1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58662" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(2)T3</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58606" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(2)T2</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58612" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(2b)E</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58659" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(3)M2</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58613" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(2)S2</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58663" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(3)S2</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58625" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(3)SN1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58843" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(4)E</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58778" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(3)E1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58707" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(2)E2</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58704" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(1)T1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58666" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(1)SN</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58784" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(1)T4</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58628" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(2a)E1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58922" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.6(1)S</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58775" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(1)SY1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58665" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(1)S1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58847" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(3)S</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58923" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.6(1)T</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58635" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(2)T</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58786" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(3)S3</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58785" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(3)M3</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58711" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(3)E2</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58710" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(3a)E</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58708" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(2)EA1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58859" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(2)EA2</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58709" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(3)EA</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58706" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(1)SY0a</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58794" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(2)SY</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58866" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.3(3)S7</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58718" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(3)M4</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58783" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(1)S4</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58701" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(2)S3</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58842" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(2)S4</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58670" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(3)S0d</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58870" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(3)S4</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58702" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(2)T4</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58787" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(1)S2</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58851" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(1)S3</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58790" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(2)S1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58874" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(2)S2</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58703" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(1)SN1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58691" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(2)SN</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58679" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(2)SN0a</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58788" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(1)T2</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58809" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(1)T3</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58791" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(2)T1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58808" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(2)T2</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58879" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.6(2)T</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58854" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(3)E3</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58807" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(3m)E2</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58846" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(3)M1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58798" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(1)SY1a</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58946" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.3(1)SY</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58810" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(3)S0e</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58850" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(3)SN0a</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58813" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(2)EB1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58856" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(4)E1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58890" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(3)M0a</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58848" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(3)S1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58844" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(4)EA</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58852" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(2)E4</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58860" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(4)EA1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58871" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(3)S5</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58876" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(2)T3</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58849" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(3)S1a</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58869" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.4(3)M5</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58873" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(3)M2</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58862" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(2)SY1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58881" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.6(1)T0a</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58943" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(3)S2</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58950" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.6(1)S1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58918" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.6(1)T1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58945" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.3(0)SY</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58895" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(3)S0a</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58896" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(3)SN</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58894" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(2)XB</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58898" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.3(3)S6a</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58902" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.6(1)SN</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58900" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.6(1)SN1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58932" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(3m)E5</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58947" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(3)M2a</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58972" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(4m)E1</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:59026" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(2)EA3</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58927" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(2)EB2</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58942" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(1)T4</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:59027" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(4)EA3</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58944" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.6(2)T0a</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:58929" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.2(3m)E7</version_string>
+    </version55_state>
+    <version55_state id="oval:cisco.oval:ste:59037" version="1" xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5#ios">
+      <version_string>15.5(3)S4b</version_string>
+    </version55_state>
+  </states>
+</oval_definitions>
