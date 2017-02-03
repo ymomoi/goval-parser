@@ -50,6 +50,7 @@ type Criteria struct {
 // Criterion : >definitions>definition>criteria>*>criterion
 type Criterion struct {
 	XMLName xml.Name `xml:"criterion"`
+	Negate  bool     `xml:"negate,attr"`
 	TestRef string   `xml:"test_ref,attr"`
 	Comment string   `xml:"comment,attr"`
 }
@@ -78,16 +79,22 @@ type Tests struct {
 
 // LineTest : >tests>line_test
 type LineTest struct {
-	XMLName    xml.Name    `xml:"line_test"`
-	ObjectRefs []ObjectRef `xml:"object"`
-	StateRefs  []StateRef  `xml:"state"`
+	XMLName       xml.Name    `xml:"line_test"`
+	ID            string      `xml:"id,attr"`
+	StateOperator string      `xml:"state_operator,attr"`
+	ObjectRefs    []ObjectRef `xml:"object"`
+	StateRefs     []StateRef  `xml:"state"`
+	Comment       string      `xml:"comment,attr"`
 }
 
 // Version55Test : >tests>version55_test
 type Version55Test struct {
-	XMLName    xml.Name    `xml:"version55_test"`
-	ObjectRefs []ObjectRef `xml:"object"`
-	StateRefs  []StateRef  `xml:"state"`
+	XMLName       xml.Name    `xml:"version55_test"`
+	ID            string      `xml:"id,attr"`
+	StateOperator string      `xml:"state_operator,attr"`
+	ObjectRefs    []ObjectRef `xml:"object"`
+	StateRefs     []StateRef  `xml:"state"`
+	Comment       string      `xml:"comment,attr"`
 }
 
 // ObjectRef : >tests>line_test>object-object_ref
