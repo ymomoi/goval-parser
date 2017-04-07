@@ -2,8 +2,8 @@ package oval
 
 import "encoding/xml"
 
-// OVALDefinitions : root object
-type OVALDefinitions struct {
+// Root : root object
+type Root struct {
 	XMLName     xml.Name    `xml:"oval_definitions"`
 	Generator   Generator   `xml:"generator"`
 	Definitions Definitions `xml:"definitions"`
@@ -36,6 +36,7 @@ type Definition struct {
 	Affecteds   []Affected  `xml:"metadata>affected"`
 	References  []Reference `xml:"metadata>reference"`
 	Description string      `xml:"metadata>description"`
+	Advisory    Advisory    `xml:"metadata>advisory"`
 	Criteria    Criteria    `xml:"criteria"`
 }
 
@@ -68,6 +69,23 @@ type Reference struct {
 	Source  string   `xml:"source,attr"`
 	RefID   string   `xml:"ref_id,attr"`
 	RefURL  string   `xml:"ref_url,attr"`
+}
+
+// Advisory : >definitions>definition>metadata>advisory
+type Advisory struct {
+	XMLName         xml.Name `xml:"advisory"`
+	Severity        string   `xml:"severity"`
+	CveID           string   `xml:"cve"`
+	Bugzilla        Bugzilla `xml:"bugzilla"`
+	AffectedCPEList []string `xml:"affected_cpe_list>cpe"`
+}
+
+// Bugzilla : >definitions>definition>metadata>advisory>bugzilla
+type Bugzilla struct {
+	XMLName xml.Name `xml:"bugzilla"`
+	ID      string   `xml:"id,attr"`
+	URL     string   `xml:"href,attr"`
+	Title   string   `xml:",chardata"`
 }
 
 // Tests : >tests

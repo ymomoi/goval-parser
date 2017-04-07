@@ -26,12 +26,12 @@ func main() {
 }
 
 // readOval : Read OVAL definitions from file
-func readOval(file string) (*oval.OVALDefinitions, error) {
+func readOval(file string) (*oval.Root, error) {
 	str, err := ioutil.ReadFile(file)
 	if err != nil {
 		return nil, fmt.Errorf("Can't open file: %s", err)
 	}
-	oval := &oval.OVALDefinitions{}
+	oval := &oval.Root{}
 	err = xml.Unmarshal([]byte(str), oval)
 	if err != nil {
 		return nil, fmt.Errorf("Can't parse XML: %s", err)
