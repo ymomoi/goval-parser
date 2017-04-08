@@ -44,7 +44,7 @@ type Definition struct {
 type Criteria struct {
 	XMLName    xml.Name    `xml:"criteria"`
 	Operator   string      `xml:"operator,attr"`
-	Criterias  []*Criteria `xml:"criteria"`
+	Criterias  []Criteria  `xml:"criteria"`
 	Criterions []Criterion `xml:"criterion"`
 }
 
