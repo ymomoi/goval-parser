@@ -72,15 +72,29 @@ type Reference struct {
 }
 
 // Advisory : >definitions>definition>metadata>advisory
+// RedHat OVAL
 type Advisory struct {
-	XMLName         xml.Name `xml:"advisory"`
-	Severity        string   `xml:"severity"`
-	CveID           string   `xml:"cve"`
-	Bugzilla        Bugzilla `xml:"bugzilla"`
-	AffectedCPEList []string `xml:"affected_cpe_list>cpe"`
+	XMLName         xml.Name   `xml:"advisory"`
+	Severity        string     `xml:"severity"`
+	Cves            []Cve      `xml:"cve"`
+	Bugzillas       []Bugzilla `xml:"bugzilla"`
+	AffectedCPEList []string   `xml:"affected_cpe_list>cpe"`
+}
+
+// Cve : >definitions>definition>metadata>advisory>cve
+// RedHat OVAL
+type Cve struct {
+	XMLName xml.Name `xml:"cve"`
+	CveID   string   `xml:",chardata"`
+	Cvss2   string   `xml:"cvss2,attr"`
+	Cvss3   string   `xml:"cvss3,attr"`
+	Cwe     string   `xml:"cwe,attr"`
+	Href    string   `xml:"href,attr"`
+	Public  string   `xml:"public,attr"`
 }
 
 // Bugzilla : >definitions>definition>metadata>advisory>bugzilla
+// RedHat OVAL
 type Bugzilla struct {
 	XMLName xml.Name `xml:"bugzilla"`
 	ID      string   `xml:"id,attr"`
