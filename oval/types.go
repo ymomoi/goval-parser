@@ -36,6 +36,7 @@ type Definition struct {
 	Affecteds   []Affected  `xml:"metadata>affected"`
 	References  []Reference `xml:"metadata>reference"`
 	Description string      `xml:"metadata>description"`
+	MoreInfo    string      `xml:"metadata>debian>moreinfo"` // Debian only
 	Advisory    Advisory    `xml:"metadata>advisory"`
 	Criteria    Criteria    `xml:"criteria"`
 }
