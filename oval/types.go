@@ -36,7 +36,8 @@ type Definition struct {
 	Affecteds   []Affected  `xml:"metadata>affected"`
 	References  []Reference `xml:"metadata>reference"`
 	Description string      `xml:"metadata>description"`
-	Advisory    Advisory    `xml:"metadata>advisory"`
+	Advisory    Advisory    `xml:"metadata>advisory"` // RedHat only
+	Debian      Debian      `xml:"metadata>debian"`   // Debian only
 	Criteria    Criteria    `xml:"criteria"`
 }
 
@@ -100,6 +101,13 @@ type Bugzilla struct {
 	ID      string   `xml:"id,attr"`
 	URL     string   `xml:"href,attr"`
 	Title   string   `xml:",chardata"`
+}
+
+// Debian : >definitions>definition>metadata>debian
+type Debian struct {
+	XMLName  xml.Name `xml:"debian"`
+	MoreInfo string   `xml:"moreinfo"`
+	Date     string   `xml:"date"`
 }
 
 // Tests : >tests
