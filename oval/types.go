@@ -36,8 +36,8 @@ type Definition struct {
 	Affecteds   []Affected  `xml:"metadata>affected"`
 	References  []Reference `xml:"metadata>reference"`
 	Description string      `xml:"metadata>description"`
-	Advisory    Advisory    `xml:"metadata>advisory"` // RedHat only
-	Debian      Debian      `xml:"metadata>debian"`   // Debian only
+	Advisory    Advisory    `xml:"metadata>advisory"` // RedHat, Oracle, Ubuntu
+	Debian      Debian      `xml:"metadata>debian"`   // Debian
 	Criteria    Criteria    `xml:"criteria"`
 }
 
@@ -73,13 +73,21 @@ type Reference struct {
 }
 
 // Advisory : >definitions>definition>metadata>advisory
-// RedHat OVAL
+// RedHat and Ubuntu OVAL
 type Advisory struct {
 	XMLName         xml.Name   `xml:"advisory"`
 	Severity        string     `xml:"severity"`
 	Cves            []Cve      `xml:"cve"`
 	Bugzillas       []Bugzilla `xml:"bugzilla"`
 	AffectedCPEList []string   `xml:"affected_cpe_list>cpe"`
+	Refs            []Ref      `xml:"ref"` // Ubuntu Only
+}
+
+// Ref : >definitions>definition>metadata>advisory>ref
+// Ubuntu OVAL
+type Ref struct {
+	XMLName xml.Name `xml:"ref"`
+	URL     string   `xml:",chardata"`
 }
 
 // Cve : >definitions>definition>metadata>advisory>cve

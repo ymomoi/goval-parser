@@ -22,6 +22,7 @@ func main() {
 			fmt.Println(err.Error())
 		}
 		pp.Println(oval)
+		pp.Println(oval.Definitions.Definitions[0].Debian)
 	}
 }
 
