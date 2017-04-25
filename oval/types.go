@@ -81,12 +81,20 @@ type Advisory struct {
 	Bugzillas       []Bugzilla `xml:"bugzilla"`
 	AffectedCPEList []string   `xml:"affected_cpe_list>cpe"`
 	Refs            []Ref      `xml:"ref"` // Ubuntu Only
+	Bugs            []Bug      `xml:"bug"` // Ubuntu Only
 }
 
 // Ref : >definitions>definition>metadata>advisory>ref
 // Ubuntu OVAL
 type Ref struct {
 	XMLName xml.Name `xml:"ref"`
+	URL     string   `xml:",chardata"`
+}
+
+// Bug : >definitions>definition>metadata>advisory>bug
+// Ubuntu OVAL
+type Bug struct {
+	XMLName xml.Name `xml:"bug"`
 	URL     string   `xml:",chardata"`
 }
 
