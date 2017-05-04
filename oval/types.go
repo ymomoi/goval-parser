@@ -1,6 +1,8 @@
 package oval
 
-import "encoding/xml"
+import (
+	"encoding/xml"
+)
 
 // Root : root object
 type Root struct {
@@ -82,6 +84,12 @@ type Advisory struct {
 	AffectedCPEList []string   `xml:"affected_cpe_list>cpe"`
 	Refs            []Ref      `xml:"ref"` // Ubuntu Only
 	Bugs            []Bug      `xml:"bug"` // Ubuntu Only
+	Issued          struct {
+		Date string `xml:"date,attr"`
+	} `xml:"issued"`
+	Updated struct {
+		Date string `xml:"date,attr"`
+	} `xml:"updated"`
 }
 
 // Ref : >definitions>definition>metadata>advisory>ref
