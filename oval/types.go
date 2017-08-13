@@ -114,6 +114,7 @@ type Cve struct {
 	Cvss2   string   `xml:"cvss2,attr"`
 	Cvss3   string   `xml:"cvss3,attr"`
 	Cwe     string   `xml:"cwe,attr"`
+	Impact  string   `xml:"impact,attr"`
 	Href    string   `xml:"href,attr"`
 	Public  string   `xml:"public,attr"`
 }
