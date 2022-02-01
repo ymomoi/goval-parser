@@ -369,15 +369,18 @@ type RpminfoState struct {
 		Datatype  string `xml:"datatype,attr"`
 		Operation string `xml:"operation,attr"`
 	} `xml:"evr"`
-	SignatureKeyid struct {
-		Text      string `xml:",chardata"`
-		Operation string `xml:"operation,attr"`
-	} `xml:"signature_keyid"`
-	Arch struct {
+	SignatureKeyid SignatureKeyid `xml:"signature_keyid"`
+	Arch           struct {
 		Text      string `xml:",chardata"`
 		Datatype  string `xml:"datatype,attr"`
 		Operation string `xml:"operation,attr"`
 	} `xml:"arch"`
+}
+
+// SignatureKeyid : >states>rpminfo_state>signature_keyid
+type SignatureKeyid struct {
+	Text      string `xml:",chardata"`
+	Operation string `xml:"operation,attr"`
 }
 
 // RpmverifyfileState : >states>rpmverifyfile_state
