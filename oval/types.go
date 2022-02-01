@@ -77,13 +77,14 @@ type Reference struct {
 // Advisory : >definitions>definition>metadata>advisory
 // RedHat and Ubuntu OVAL
 type Advisory struct {
-	XMLName         xml.Name   `xml:"advisory"`
-	Severity        string     `xml:"severity"`
-	Cves            []Cve      `xml:"cve"`
-	Bugzillas       []Bugzilla `xml:"bugzilla"`
-	AffectedCPEList []string   `xml:"affected_cpe_list>cpe"`
-	Refs            []Ref      `xml:"ref"` // Ubuntu Only
-	Bugs            []Bug      `xml:"bug"` // Ubuntu Only
+	XMLName         xml.Name     `xml:"advisory"`
+	Severity        string       `xml:"severity"`
+	Cves            []Cve        `xml:"cve"`
+	Bugzillas       []Bugzilla   `xml:"bugzilla"`
+	AffectedCPEList []string     `xml:"affected_cpe_list>cpe"`
+	Refs            []Ref        `xml:"ref"` // Ubuntu Only
+	Bugs            []Bug        `xml:"bug"` // Ubuntu Only
+	Affected        AffectedPkgs `xml:"affected"`
 	Issued          struct {
 		Date string `xml:"date,attr"`
 	} `xml:"issued"`
@@ -126,6 +127,15 @@ type Bugzilla struct {
 	ID      string   `xml:"id,attr"`
 	URL     string   `xml:"href,attr"`
 	Title   string   `xml:",chardata"`
+}
+
+// AffectedPkgs : >definitions>definition>metadata>advisory>affected
+// RedHat OVAL
+type AffectedPkgs struct {
+	Resolution struct {
+		State     string   `xml:"state,attr"`
+		Component []string `xml:"component"`
+	} `xml:"resolution"`
 }
 
 // Debian : >definitions>definition>metadata>debian
